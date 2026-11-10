@@ -1,0 +1,85 @@
+@pablo667PGM ➜ /workspaces/esilv-marketpulse-g04-t05 (main) $ git switch -c Pablo_JOSSE
+Switched to a new branch 'Pablo_JOSSE'
+@pablo667PGM ➜ /workspaces/esilv-marketpulse-g04-t05 (Pablo_JOSSE) $ mkdir -p evidence/Pablo_JOSSE/td_01_linux_basics.txt
+@pablo667PGM ➜ /workspaces/esilv-marketpulse-g04-t05 (Pablo_JOSSE) $ rm -r evidence/Pablo_JOSSE/td_01_linux/temp.txt
+rm: cannot remove 'evidence/Pablo_JOSSE/td_01_linux/temp.txt': No such file or directory
+@pablo667PGM ➜ /workspaces/esilv-marketpulse-g04-t05 (Pablo_JOSSE) $ rm -r evidence/Pablo_JOSSE/td_01_linux/basics.txt
+rm: cannot remove 'evidence/Pablo_JOSSE/td_01_linux/basics.txt': No such file or directory
+@pablo667PGM ➜ /workspaces/esilv-marketpulse-g04-t05 (Pablo_JOSSE) $ rm -r evidence/Pablo_JOSSE/td_01_linux_basics.txt
+@pablo667PGM ➜ /workspaces/esilv-marketpulse-g04-t05 (Pablo_JOSSE) $ mkdir -p evidence/Pablo_JOSSE
+@pablo667PGM ➜ /workspaces/esilv-marketpulse-g04-t05 (Pablo_JOSSE) $ touch evidence/Pablo_JOSSE/td_01_linux_basics.txt
+@pablo667PGM ➜ /workspaces/esilv-marketpulse-g04-t05 (Pablo_JOSSE) $ cat data/sample/instruments.json
+{
+  "instrument": {
+    "ticker": "AAPL",
+    "name": "Apple Inc.",
+    "currency": "USD",
+    "market": "NASDAQ"
+  },
+  "benchmark": {
+    "ticker": "SP500",
+    "name": "S&P 500",
+    "currency": "USD",
+    "market": "US"
+  }
+}
+@pablo667PGM ➜ /workspaces/esilv-marketpulse-g04-t05 (Pablo_JOSSE) $ head -3 data/sample/prices.csv
+date,ticker,open,high,low,close,volume
+2026-09-01,AAPL,249.20,251.50,248.00,250.00,38000000
+2026-09-01,SP500,6592.00,6615.00,6580.00,6600.00,0
+@pablo667PGM ➜ /workspaces/esilv-marketpulse-g04-t05 (Pablo_JOSSE) $ grep AAPL data/sample/prices.csv
+2026-09-01,AAPL,249.20,251.50,248.00,250.00,38000000
+2026-09-02,AAPL,250.80,252.80,249.60,251.30,39500000
+2026-09-03,AAPL,249.60,251.30,248.40,249.80,41000000
+2026-09-04,AAPL,251.30,253.60,250.10,252.10,42500000
+2026-09-08,AAPL,251.90,253.90,250.70,252.40,44000000
+2026-09-09,AAPL,254.00,255.70,252.80,254.20,38000000
+2026-09-10,AAPL,254.30,256.60,253.10,255.10,39500000
+2026-09-11,AAPL,254.20,256.20,253.00,254.70,41000000
+2026-09-14,AAPL,256.60,258.30,255.40,256.80,42500000
+2026-09-15,AAPL,257.20,259.50,256.00,258.00,44000000
+2026-09-16,AAPL,256.70,258.70,255.50,257.20,38000000
+2026-09-17,AAPL,259.20,260.90,258.00,259.40,39500000
+2026-09-18,AAPL,259.30,261.60,258.10,260.10,41000000
+2026-09-21,AAPL,259.10,261.10,257.90,259.60,42500000
+2026-09-22,AAPL,261.10,262.80,259.90,261.30,44000000
+2026-09-23,AAPL,261.20,263.50,260.00,262.00,38000000
+2026-09-24,AAPL,263.00,265.00,261.80,263.50,39500000
+2026-09-25,AAPL,262.60,264.30,261.40,262.80,41000000
+2026-09-28,AAPL,263.30,265.60,262.10,264.10,42500000
+2026-09-29,AAPL,264.50,266.50,263.30,265.00,44000000
+2026-09-30,AAPL,266.00,267.70,264.80,266.20,38000000
+@pablo667PGM ➜ /workspaces/esilv-marketpulse-g04-t05 (Pablo_JOSSE) $ grep AAPL data/sample/prices.csv head -n
+data/sample/prices.csv:2:2026-09-01,AAPL,249.20,251.50,248.00,250.00,38000000
+data/sample/prices.csv:4:2026-09-02,AAPL,250.80,252.80,249.60,251.30,39500000
+data/sample/prices.csv:6:2026-09-03,AAPL,249.60,251.30,248.40,249.80,41000000
+data/sample/prices.csv:8:2026-09-04,AAPL,251.30,253.60,250.10,252.10,42500000
+data/sample/prices.csv:10:2026-09-08,AAPL,251.90,253.90,250.70,252.40,44000000
+data/sample/prices.csv:12:2026-09-09,AAPL,254.00,255.70,252.80,254.20,38000000
+data/sample/prices.csv:14:2026-09-10,AAPL,254.30,256.60,253.10,255.10,39500000
+data/sample/prices.csv:16:2026-09-11,AAPL,254.20,256.20,253.00,254.70,41000000
+data/sample/prices.csv:18:2026-09-14,AAPL,256.60,258.30,255.40,256.80,42500000
+data/sample/prices.csv:20:2026-09-15,AAPL,257.20,259.50,256.00,258.00,44000000
+data/sample/prices.csv:22:2026-09-16,AAPL,256.70,258.70,255.50,257.20,38000000
+data/sample/prices.csv:24:2026-09-17,AAPL,259.20,260.90,258.00,259.40,39500000
+data/sample/prices.csv:26:2026-09-18,AAPL,259.30,261.60,258.10,260.10,41000000
+data/sample/prices.csv:28:2026-09-21,AAPL,259.10,261.10,257.90,259.60,42500000
+data/sample/prices.csv:30:2026-09-22,AAPL,261.10,262.80,259.90,261.30,44000000
+data/sample/prices.csv:32:2026-09-23,AAPL,261.20,263.50,260.00,262.00,38000000
+data/sample/prices.csv:34:2026-09-24,AAPL,263.00,265.00,261.80,263.50,39500000
+data/sample/prices.csv:36:2026-09-25,AAPL,262.60,264.30,261.40,262.80,41000000
+data/sample/prices.csv:38:2026-09-28,AAPL,263.30,265.60,262.10,264.10,42500000
+data/sample/prices.csv:40:2026-09-29,AAPL,264.50,266.50,263.30,265.00,44000000
+data/sample/prices.csv:42:2026-09-30,AAPL,266.00,267.70,264.80,266.20,38000000
+grep: head: No such file or directory
+
+@pablo667PGM ➜ /workspaces/esilv-marketpulse-g04-t05 (Pablo_JOSSE) $ grep AAPL data/sample/prices.csv | head -n 3
+2026-09-01,AAPL,249.20,251.50,248.00,250.00,38000000
+2026-09-02,AAPL,250.80,252.80,249.60,251.30,39500000
+2026-09-03,AAPL,249.60,251.30,248.40,249.80,41000000
+
+@pablo667PGM ➜ /workspaces/esilv-marketpulse-g04-t05 (Pablo_JOSSE) $ grep -m 3 AAPL data/sample/prices.csv
+2026-09-01,AAPL,249.20,251.50,248.00,250.00,38000000
+2026-09-02,AAPL,250.80,252.80,249.60,251.30,39500000
+2026-09-03,AAPL,249.60,251.30,248.40,249.80,41000000
+
