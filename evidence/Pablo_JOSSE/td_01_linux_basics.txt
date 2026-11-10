@@ -102,3 +102,11 @@ Interval: Daily
 Observations
 AAPL: 21
 SP500: 21
+
+@pablo667PGM ➜ /workspaces/esilv-marketpulse-g04-t05 (Pablo_JOSSE) $ cd evidence/Pablo_JOSSE
+@pablo667PGM ➜ /workspaces/esilv-marketpulse-g04-t05/evidence/Pablo_JOSSE (Pablo_JOSSE) $ touch td_01_output.txt
+@pablo667PGM ➜ /workspaces/esilv-marketpulse-g04-t05/evidence/Pablo_JOSSE (Pablo_JOSSE) $ mv td_01_output.txt td_01_main_output.txt
+@pablo667PGM ➜ /workspaces/esilv-marketpulse-g04-t05/evidence/Pablo_JOSSE (Pablo_JOSSE) $ ls
+td_01_linux_basics.txt  td_01_main_output.txt
+@pablo667PGM ➜ /workspaces/esilv-marketpulse-g04-t05/evidence/Pablo_JOSSE (Pablo_JOSSE) $ cd ../..
+
