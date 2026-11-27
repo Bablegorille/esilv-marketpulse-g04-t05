@@ -25,10 +25,21 @@ def load_prices():
 def filter_prices(prices, ticker):
     return [row for row in prices if row["ticker"] == ticker]
 
+def normalize_price_row(row):
+    return {
 
+        "date":row["date"],
+        "ticker":row["ticker"],
+        "open":float(row["open"]),
+        "high":float(row["high"]),
+        "low":float(row["low"]),
+        "close":float(row["close"]),
+        "volume":int(row["volume"]),
+    }
 def main():
     instruments = load_instruments()
-    prices = load_prices()
+    raw_prices = load_prices()
+    prices = [normalize_price_row(row) for row in raw_prices]
 
     instrument = instruments["instrument"]
     benchmark = instruments["benchmark"]
